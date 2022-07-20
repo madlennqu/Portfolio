@@ -1,0 +1,34 @@
+list = ["madiya", "ablaykhan", "azel"]
+import random
+choice = random.choice(list)
+
+print(f"The solution is {choice}")
+display = []
+for _ in choice:
+    display += "_"
+print(display)
+
+#for letter in choice:
+ #   if letter == guess:
+  #      print("Yay")
+   # else:
+    #    print("Nah")
+end_of_game = False
+lives = 6
+while not end_of_game:
+    guess = input("Find a word: ").lower()
+    for position in range(len(choice)):
+        letter = choice[position]
+        if letter == guess:
+            display[position] = letter
+
+    if guess not in choice:
+        print(f"You guess {guess} is not true")
+        lives -= 1
+        if lives == 0:
+            end_of_game [True]
+            print("You lost")
+    print(f"{' '.join(display)}")
+if "_" not in display:
+    end_of_game = True
+    print("You won")
