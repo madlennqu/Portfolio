@@ -28,6 +28,3 @@ def bmi_app():
 
 
 bmi_app()
-
-# how to improve?
-# Q1 what if the weight is not integer? e.g. 62.5
