@@ -1,4 +1,3 @@
-#Vocab builder
 def vocab_builder():
     vocabs = {'programming': ['the act of writing computer program', 'p_________g'],
               'python': ['a kind of very large snake', 'p____n'],
@@ -229,7 +228,7 @@ def print_item(a_list, index):
 err_example()
 
 
-#Vocab builder code 30 Oct
+#Vocab builder code 
 def vocab_app():
     vocabs = {'programming': ['the activity or job of writing computer programs', '_______ming'],
               'python': [
