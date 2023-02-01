@@ -1,8 +1,4 @@
-# you can download at
-# https://goo.gl/WKdcqo
-
 import random
-
 
 def guess_lucky_number():
     colors = ['red', 'blue', 'green', 'purple', 'yellow']
