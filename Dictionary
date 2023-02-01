@@ -1,6 +1,3 @@
-
-dictionary
-
 def sum_of_dict_value(dictionary, n):
     # Write your code here
     x=0
