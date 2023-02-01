@@ -15,11 +15,6 @@ def new_word():
 new_word()
 
 
-
-
-
-
-
 def new_word():
     try:
         word, definition, hint = input("Enter a new words (word|definition|hint)").split("|")
