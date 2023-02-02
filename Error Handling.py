@@ -27,5 +27,3 @@ def new_word():
     except:
         print("Something is wrong")
         new_word()
-
-
