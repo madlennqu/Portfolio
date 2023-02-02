@@ -10,7 +10,7 @@ file.close()
 
 #read
 file = open('todolist.txt','r')
-file = open('/Users/henrytang/PycharmProjects/intropython/New/todolist.txt','r')
+file = open('/Users/madlennqu/PycharmProjects/intropython/New/todolist.txt','r')
 
 
 
