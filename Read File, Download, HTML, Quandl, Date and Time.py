@@ -1,7 +1,7 @@
 #Read/Write file example code
 # Read file
 
-file = open("/Users/henrytang/PycharmProjects/pythonprog/econ3086/AAPL.csv", "r")
+file = open("/Users/madlennqu/PycharmProjects/pythonprog/econ3086/AAPL.csv", "r")
 # read one line
 file.readline()
 # Go back to the beginning
@@ -14,33 +14,27 @@ for line in file:
 file.close()
 
 # if you don't want to close the file by yourself
-with open("/Users/henrytang/PycharmProjects/pythonprog/econ3086/AAPL.csv","r") as file:
+with open("/Users/madlennqu/PycharmProjects/pythonprog/econ3086/AAPL.csv","r") as file:
     for line in file:
         print(line, end="")
         
 # Write (Overwrite)
-out_file = open("/Users/henrytang/PycharmProjects/pythonprog/econ3086/example456.csv",'w') 
+out_file = open("/Users/madlennqu/PycharmProjects/pythonprog/econ3086/example456.csv",'w') 
 out_file.write("I'm Susan\n")
 out_file.close()
 # Write (Append)   
-out_file = open("/Users/henrytang/PycharmProjects/pythonprog/econ3086/example456.csv",'a') 
+out_file = open("/Users/madlennqu/PycharmProjects/pythonprog/econ3086/example456.csv",'a') 
 out_file.write("I'm Susan\n")
 out_file.close()
 # Write without need to close file
-with open("/Users/henrytang/PycharmProjects/pythonprog/econ3086/example456.csv",'a') as out_file:
+with open("/Users/madlennqu/PycharmProjects/pythonprog/econ3086/example456.csv",'a') as out_file:
     for i in range(10):
         out_file.write("{},{},{}\n".format(i,i**2,i**i))
 
 #Read write file exercise
-# Step 1. download csv file from Yahoo finance
-# https://finance.yahoo.com/quote/AAPL/history?p=AAPL
-
-
-# Step 2. Read the file and print the date and close price
-
-
-# Step 3. Write the data to another file with a new column, "Day changes" which is close / open -1
-Read Write file answer
+#downloaded csv file from Yahoo finance: https://finance.yahoo.com/quote/AAPL/history?p=AAPL
+# read the file and print the date and close price
+# wrote the data to another file with a new column, "Day changes" which is close / open -1
 with open("AAPL.csv", "r") as in_file:
     with open("AAPL_out.csv", "w") as out_file:
         header = in_file.readline()
@@ -50,15 +44,6 @@ with open("AAPL.csv", "r") as in_file:
             (date, open_p, high, low, close, adj_c, vol) = line.split(",")
             changes = float(close) / float(open_p) - 1
             out_file.write("{},{},{}\n".format(date, close, changes))
-
-#Solving SSL issues on MacOS
-Run the following command in Mac Terminal will fix the problem
-/Applications/Python\ 3.8/Install\ Certificates.command
-
-Reference:
-https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
 
 #Get HTML file content
 import urllib.request as ur
@@ -103,7 +88,6 @@ def get_latest_price(symbol):
 import datetime as dt
 # Current time
 dt.datetime.now()
-dt.datetime.utcnow()
 # Print time
 dt.datetime.now().strftime("%Y-%m-%d %H:%M")
 # create date
@@ -113,6 +97,3 @@ mydatetime = dt.datetime(2003,6,28,12,4,5)
 tomorrow = dt.datetime.now() + dt.timedelta(days=1)
 # diff between dates
 mydatetime - dt.datetime.now()
-
-#Python Date time string format code
-Click https://strftime.org/ link to open resource.
