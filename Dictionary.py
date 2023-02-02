@@ -1,5 +1,4 @@
 def sum_of_dict_value(dictionary, n):
-    # Write your code here
     x=0
     for k, v in dictionary.items():
         if k>n:
@@ -10,7 +9,6 @@ sum_of_dict_value({10:20, 20:30, 30:40},15)
 
 
 def uniq_list_of_value(dictionary):
-    # Write your code here
     x= []
     for k, v in dictionary.items():
         if v not in x:
@@ -22,7 +20,6 @@ uniq_list_of_value(z)
 z={'a':10,'b':20,'c':20, 'd':30}
 
 def uniq_list_of_value(dictionary):
-    # Write your code here
     x= []
     for v in dictionary.values():
         if v not in x:
