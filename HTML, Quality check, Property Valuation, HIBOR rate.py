@@ -1,7 +1,7 @@
 #HTML
 https://www.w3schools.com/html/default.asp
 
-#Beach Water Quality (out dated)
+#Beach Water Quality 
 import urllib.request
 import bs4
 url = "https://cd.epic.epd.gov.hk/EPICDI/beach/grading/"
@@ -16,11 +16,10 @@ def get_beach_water_quality(beach_code):
     html = bs4.BeautifulSoup(text, 'html.parser')
 
     grade = html.find("div",attrs={"class" : "grade_caption"}).text.strip().split(" : ")[1]
-
-    #print(grade)
+    
     return grade
 
-#get_beach_water_quality("hom")
+#get_beach_water_quality
 
 for element in html.find_all("div",attrs={"class" : "btn_beach_fix_size"}):
     try:
@@ -92,7 +91,7 @@ def get_one_month_hibor(year, month, day):
 print(get_one_month_hibor(2018,2,14))
 
 #Reference: POST Request
-Click https://docs.python.org/3.7/howto/urllib2.html#data link to open resource
+Click https://docs.python.org/3.7/howto/urllib2.html #data link to open resource
 
 #Get beach grade by beach code
 import urllib.request
@@ -112,7 +111,7 @@ print(get_beach_grade("oc"))
 print(get_beach_grade("cp"))
 print(get_beach_grade("b"))
 
-#HIBOR (code in class)
+#HIBOR 
 
 import urllib.request
 import bs4
@@ -142,7 +141,7 @@ for day in range(1,31):
     print(hibors[1])
     time.sleep(2)
 
-#Beach Quality (code in class 13 Nov)
+#Beach Quality 
 
 import urllib.request
 import bs4
@@ -171,10 +170,3 @@ for beach_ele in beaches_elem:
     except:
         print("error on processing {}".format(beach_ele))
 
-
-#Work around for SSL issues
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
-
-#curl to python request convertor
-Click https://curlconverter.com/ link to open resource.
